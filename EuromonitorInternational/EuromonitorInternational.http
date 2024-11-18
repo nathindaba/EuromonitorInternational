@@ -1,0 +1,6 @@
+@EuromonitorInternational_HostAddress = http://localhost:5089
+
+GET {{EuromonitorInternational_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

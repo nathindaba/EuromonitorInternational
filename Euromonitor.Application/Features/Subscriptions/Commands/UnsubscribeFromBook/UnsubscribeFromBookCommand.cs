@@ -1,5 +1,6 @@
-﻿namespace Euromonitor.Application.Features.Subscriptions.Commands.UnsubscribeFromBook;
+﻿using Euromonitor.Application.Common.Responses;
+using MediatR;
 
-internal class UnsubscribeFromBookCommand
-{
-}
+namespace Euromonitor.Application.Features.Subscriptions.Commands.UnsubscribeFromBook;
+
+public record UnsubscribeFromBookCommand(int UserId, int BookId) : IRequest<Response<string>>;

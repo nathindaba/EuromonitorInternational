@@ -24,7 +24,7 @@ public class RegisterUserHandler : IRequestHandler<RegisterUserCommand, Response
             Email = request.Email
         };
 
-        //TODO await _userRepository.AddAsync(user);
+        await _userRepository.AddAsync(user);
         return new Response<int>(user.Id, HttpStatusCode.Created, "User registered successfully");
     }
 }

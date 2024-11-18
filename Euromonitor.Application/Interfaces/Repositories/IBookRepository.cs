@@ -1,5 +1,12 @@
-﻿namespace Euromonitor.Application.Interfaces.Repositories;
+﻿using Euromonitor.Domain.Entities;
 
-internal class IBookRepository
+namespace Euromonitor.Application.Interfaces.Repositories;
+
+public interface IBookRepository
 {
+    Task<Book?> GetByIdAsync(int id);
+    Task AddAsync(Book book);
+    Task UpdateAsync(Book book);
+    Task DeleteAsync(int id);
+    Task<IEnumerable<Book>> GetAllAsync();
 }

@@ -1,5 +1,12 @@
-﻿namespace Euromonitor.Application.Interfaces.Repositories;
+﻿using Euromonitor.Domain.Entities;
 
-internal interface IUserRepository
+namespace Euromonitor.Application.Interfaces.Repositories;
+
+public interface IUserRepository
 {
+    Task<User?> GetByIdAsync(int id);
+    Task AddAsync(User user);
+    Task UpdateAsync(User user);
+    Task DeleteAsync(int id);
+    Task<IEnumerable<User>> GetAllAsync();
 }
